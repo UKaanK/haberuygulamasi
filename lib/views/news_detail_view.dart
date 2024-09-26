@@ -47,7 +47,6 @@ class NewsDetailPage extends StatelessWidget {
                 child: Image.network(
                   image,
                   fit: BoxFit.cover, // Resmi kutunun tamamını doldur
-                  height: 200, // Resmin yüksekliği
                   width: double.infinity, // Genişliği doldur
                 ),
               ),
