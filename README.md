@@ -1,16 +1,18 @@
-# haberuygulamasi
+GüncelHaber Uygulaması:
+Teknoloji: Provider, Haberler API
 
-A new Flutter project.
+Açıklama: GüncelHaber Uygulaması, kullanıcılara en güncel haberleri sunmak amacıyla geliştirilmiş bir mobil haber uygulamasıdır. Bu uygulama, API tabanlı haber kaynaklarından veri çekerek kullanıcıların haberlere anında erişmesini sağlar. Proje, aşağıdaki ana bileşenlere sahiptir:
 
-## Getting Started
+Hedef: GüncelHaber, dünya genelindeki önemli olaylar ve gelişmeleri anında kullanıcıya ulaştırmayı amaçlayan bir haber uygulamasıdır. Uygulama, kullanıcıların en son haberleri kolayca takip etmelerine olanak tanır.
 
-This project is a starting point for a Flutter application.
+Gerçek Zamanlı Haber Akışı: Uygulama, birden fazla haber kaynağından API aracılığıyla veri çekmektedir. Haberler API'si kullanılarak sağlanan haberler, gerçek zamanlı olarak güncellenir ve kullanıcıya en güncel haber başlıkları ve içerikleri sunulur.
 
-A few resources to get you started if this is your first Flutter project:
+Provider Durum Yönetimi: Uygulamanın durum yönetimi için Flutter’da Provider yapısı kullanılmıştır. Bu sayede, haber verileri ve kullanıcı arayüzü arasında kesintisiz bir güncelleme sağlanmıştır. Provider yapısı, kullanıcıların uygulama içinde rahatça gezinebilmesi ve haberlerin sorunsuz bir şekilde görüntülenmesi için kullanılmıştır.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Kategorilere Göre Haber Filtreleme: Uygulamada, haberler farklı kategorilere göre ayrılmıştır. Kullanıcılar, dünya, teknoloji, spor, ekonomi gibi farklı kategorilerdeki haberleri filtreleyerek ilgilerini çeken içeriklere daha hızlı erişebilirler.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Haber Detayı ve Görseller: Kullanıcılar, haber başlıklarına tıkladıklarında haberin detaylarına ve görsel içeriklerine ulaşabilirler. Haber içeriği, başlık, tarih ve yazar bilgileri ile zenginleştirilmiş bir detay sayfası ile sunulur.
+
+Kullanıcı Dostu Arayüz: Uygulama, minimal ve modern bir tasarım anlayışıyla geliştirildi. Kullanıcılar, akıcı ve sezgisel bir arayüz sayesinde haber içeriklerine kolayca ulaşabilirler. Hızlı yüklenen sayfalar ve görseller, kullanıcı deneyimini iyileştirir.
+
+Gelecek Geliştirmeler: Uygulamanın ilerleyen sürümlerinde, kullanıcılara kişiselleştirilmiş haber önerileri sunmayı ve favori haber kaynaklarını kaydetme özelliği eklemeyi planlıyorum. Ayrıca, bildirim sistemi ile önemli haberler kullanıcıya anında iletilecek.
