@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:haberuygulamasi/views/splashscreen_view.dart';
+import 'package:provider/provider.dart';
+import 'package:haberuygulamasi/providers/news_provider.dart';
+import 'package:haberuygulamasi/views/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => NewsProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:  SplashScreen(),
+    return MaterialApp(
+      title: 'Haber Uygulaması',
+  debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
   }
 }
