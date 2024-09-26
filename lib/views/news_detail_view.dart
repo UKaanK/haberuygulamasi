@@ -6,12 +6,14 @@ class NewsDetailPage extends StatelessWidget {
   final String title;
   final String description;
   final String url;
+  final String image;
 
   const NewsDetailPage({
     Key? key,
     required this.title,
     required this.description,
     required this.url,
+    required this.image,
   }) : super(key: key);
 
   void _launchURL(String url) async {
@@ -32,6 +34,7 @@ class NewsDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        backgroundColor: Colors.red, // Uygun bir arka plan rengi
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -39,19 +42,44 @@ class NewsDetailPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title,
-                style: GoogleFonts.inter(fontSize: 24, fontWeight: FontWeight.bold),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12.0), // Kenar yuvarlama
+                child: Image.network(
+                  image,
+                  fit: BoxFit.cover, // Resmi kutunun tamamını doldur
+                  height: 200, // Resmin yüksekliği
+                  width: double.infinity, // Genişliği doldur
+                ),
               ),
               SizedBox(height: 16),
               Text(
+                title,
+                style: GoogleFonts.inter(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black, // Başlık rengi
+                ),
+              ),
+              SizedBox(height: 12),
+              Text(
                 description,
-                style: GoogleFonts.inter(fontSize: 16),
+                style: GoogleFonts.inter(
+                  fontSize: 18,
+                  height: 1.5, // Satır yüksekliği
+                  color: Colors.grey[700], // Açık gri renk
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 16.0),
+                padding: const EdgeInsets.only(top: 24.0),
                 child: ElevatedButton(
-                  onPressed: () => _launchURL(url), // URL'yi geç
+                  onPressed: () => _launchURL(url),
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30), // Düğme köşe yuvarlama
+                    ),
+                    textStyle: TextStyle(fontSize: 16),
+                  ),
                   child: Text("Haber Detayına Git"),
                 ),
               ),
